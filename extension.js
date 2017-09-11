@@ -1,7 +1,7 @@
 
 
 $(function(){
-  var data = [1,2,3,4]; // the ids coming back from serviceA
+  var data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; // the ids coming back from serviceA
   // 2. Declare an array of Deferred objects
   var processItemsDeferred = [];
   // 3. For each element of data, create a Deferred push push it to the array
