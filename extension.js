@@ -23,6 +23,8 @@ function processItem(data) {
        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
            var element  = document.createElement("p");
            element.innerText = xmlHttp.responseText;
+           var apiContent = JSON.parse(xmlHttp.responseText);
+           console.log(apiContent.length);
            var bodyElement = document.getElementById('console');
            bodyElement.appendChild(element);
            dfd.resolve();
@@ -39,7 +41,8 @@ function processItem(data) {
 // 4.1. Function called when all deferred are resolved
 function everythingDone(){
   // 4.1.1. Do some debug trace
-  var element = document.createElement("p");
+  var element = document.createElement("h1");
+  element.className = "myclass";
   element.innerText = "Finally completed all processes...";
   var bodyElement = document.getElementById('console');
   bodyElement.appendChild(element);
